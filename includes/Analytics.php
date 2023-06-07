@@ -87,7 +87,7 @@ class Analytics {
 
 	public function create_credentials() {
 		$auth = new Admin\OAuth\Auth();
-		return \Google\ApiCore\CredentialsWrapper::build(
+		return \Sect\SimpleGA4Ranking\Google\ApiCore\CredentialsWrapper::build(
 			[
 				'scopes'  => self::API_SCOPES,
 				'keyFile' => [
@@ -103,7 +103,7 @@ class Analytics {
 	public function get_dimension_value( $api_response_row ) {
 		try {
 			$demension_values = $api_response_row->getDimensionValues();
-			if ( $demension_values instanceof \Google\Protobuf\Internal\RepeatedField ) {
+			if ( $demension_values instanceof \Sect\SimpleGA4Ranking\Google\Protobuf\Internal\RepeatedField ) {
 				return $demension_values[0]->getValue();
 			} else {
 				return null;
@@ -116,7 +116,7 @@ class Analytics {
 	public function get_metric_value( $api_response_row ) {
 		try {
 			$metric_values = $api_response_row->getMetricValues();
-			if ( $metric_values instanceof \Google\Protobuf\Internal\RepeatedField ) {
+			if ( $metric_values instanceof \Sect\SimpleGA4Ranking\Google\Protobuf\Internal\RepeatedField ) {
 				return $metric_values[0]->getValue();
 			} else {
 				return null;
