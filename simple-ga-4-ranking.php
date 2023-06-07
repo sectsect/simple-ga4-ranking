@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: Simple GA 4 Ranking
+Plugin Name: Simple GA 4 Ranking (prefixed namespaces and classnames)
 Plugin URI: https://digitalcube.jp
 Description: Ranking plugin using data from google analytics.
-Author: Digitalcube
-Author URI: https://digitalcube.jp
+Author: sect
+Author URI: https://github.com/sectsect
 Version: 0.0.4
 Domain Path: /languages
 Text Domain: sga4ranking
@@ -45,8 +45,8 @@ function sga4ranking_activation_hook() {
 }
 
 if ( ! shortcode_exists( 'sga_ranking' ) ) :
-	if ( is_readable( __DIR__ . '/vendor/autoload.php' ) ) {
-		require_once __DIR__ . '/vendor/autoload.php';
+	if ( is_readable( __DIR__ . '/vendor-prefixed/autoload.php' ) ) {
+		require_once __DIR__ . '/vendor-prefixed/autoload.php';
 	}
 	require_once 'loader.php';
 	if ( false === class_exists( 'digitalcube\SimpleGA4Ranking\Core' ) ) {
