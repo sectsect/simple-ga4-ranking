@@ -1,10 +1,10 @@
 <?php
 namespace digitalcube\SimpleGA4Ranking;
 
-use Google\Analytics\Data\V1beta\BetaAnalyticsDataClient;
-use Google\Analytics\Data\V1beta\DateRange;
-use Google\Analytics\Data\V1beta\Dimension;
-use Google\Analytics\Data\V1beta\Metric;
+use Sect\SimpleGA4Ranking\Google\Analytics\Data\V1beta\BetaAnalyticsDataClient;
+use Sect\SimpleGA4Ranking\Google\Analytics\Data\V1beta\DateRange;
+use Sect\SimpleGA4Ranking\Google\Analytics\Data\V1beta\Dimension;
+use Sect\SimpleGA4Ranking\Google\Analytics\Data\V1beta\Metric;
 
 class Analytics {
 
