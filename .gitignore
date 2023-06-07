@@ -3,6 +3,7 @@ Thumbs.db
 tests/phpunit/tmp/*
 tests/phpunit/.phpunit*
 vendor
+vendor-prefixed
 simple-ga-4-ranking/
 .wp-env.override.json
 *.sql
